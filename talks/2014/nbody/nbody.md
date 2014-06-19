@@ -18,6 +18,16 @@ class: center, middle
 
 # Lua Integration
 
+1. What is Lua?
+- Embeddable scripting language
+- Interpreted bytecode runs on VM
+
+2. Why do we use it?
+- Powerful C API for exhanging data between lua script and C program
+- 
+
+--
+
 ```lua
 function makeHistogram()
    return HistogramParams.create{
