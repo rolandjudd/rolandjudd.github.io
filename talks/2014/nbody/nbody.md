@@ -37,12 +37,12 @@ class: center, middle
 - Lua file contains several functions required for setting up the simulation
 - milkyway_nbody is executed, initializing a lua intepreter and loading the lua script specifed with the -f argument
 
---
+---
 
 # Forwarded Arguments
 
 ```bash
-x1arch% milkyway_nbody -e 0 -f EMD_20k_isotropic2_custom_histogram.lua -z customHist.hist --disable-opencl 2 1 1 0.5 10 0.5
+x1arch% milkyway_nbody -e 0 -f EMD_10k_isotropic2.lua -z out.hist  2 1 1 0.5 10 0.5
 ```
 
 Command line arguments unused by milkyway_nbody are forwarded to the lua script, and can be accessed as command line arguments within the lua script.
@@ -54,7 +54,7 @@ r0  = arg[3]
 light_r_ratio = arg[4]
 ```
 
-Used by BOINC to pass the work unit parameters
+This is used by BOINC to pass the work unit parameters to the application
 
 ---
 
