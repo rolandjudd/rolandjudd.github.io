@@ -28,14 +28,35 @@ class: center, middle
 - Easy to embed in our application
 - Allows complete control of intial state
 
+---
+
+# Lua Integration
+
 ##3. How does it work?
 - Lua file is downloaded along with the nbody binary
 - Lua file contains several functions required for setting up the simulation
 - milkyway_nbody is executed, initializing a lua intepreter and loading the lua script specifed with the -f argument
 
+--
+
+# Forwarded Arguments
+
+```bash
+x1arch% milkyway_nbody -e 0 -f EMD_20k_isotropic2_custom_histogram.lua -z customHist.hist --disable-opencl 2 1 1 0.5 10 0.5
+```
+
+Command line arguments unused by milkyway_nbody are forwarded to the lua script, and can be accessed as command line arguments within the lua script.
+
+```lua 
+evolveTime       = arg[1]
+reverseOrbitTime = arg[1] / arg[2]
+r0  = arg[3]
+light_r_ratio = arg[4]
+```
+
+Used by BOINC to pass the work unit parameters
+
 ---
-
-
 
 ```lua
 function makeHistogram()
