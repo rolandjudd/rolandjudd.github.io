@@ -1,0 +1,44 @@
+.normal {
+    background-color: #EEEEEE;
+    color:#171C27;
+}
+
+.inverse {
+    background-color: #171C27;
+    color: #EEEEEE;
+}
+
+/* Two-column layout */
+.left-column {
+	width: 20%;
+	height: 92%;
+	float: left;
+}
+
+
+.right-column {
+	width: 75%;
+	float: right;
+	padding-top:1em;
+}
+
+table {
+	border-collapse: collapse;
+	font-size: 0.9em;
+}
+
+thead {
+	background-color: #171C27;
+	color: #EEEEEE;
+}
+
+th , td{
+	padding-right:2em;
+	padding-bottom: 0.25em;
+	padding-top: 0.25em;
+	padding-left: 0.25em;
+}
+
+tr {
+	border-bottom: 1px solid #171C27;
+}
